@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sneakers_pairs",
+  "info": {
+    "name": "sneakers pair",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "model": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 30
+    },
+    "brand": {
+      "model": "brand"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "min": 1,
+      "max": 100000
+    },
+    "imagesGalery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "sizes": {
+      "type": "json",
+      "required": true
+    },
+    "distinctiveImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "unique": true,
+      "minLength": 25,
+      "maxLength": 200
+    }
+  }
+}
