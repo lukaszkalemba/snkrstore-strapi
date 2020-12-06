@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/featured-sneakers-pairs",
+      "handler": "featured-sneakers-pair.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/featured-sneakers-pairs/count",
+      "handler": "featured-sneakers-pair.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/featured-sneakers-pairs/:id",
+      "handler": "featured-sneakers-pair.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/featured-sneakers-pairs",
+      "handler": "featured-sneakers-pair.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/featured-sneakers-pairs/:id",
+      "handler": "featured-sneakers-pair.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/featured-sneakers-pairs/:id",
+      "handler": "featured-sneakers-pair.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
